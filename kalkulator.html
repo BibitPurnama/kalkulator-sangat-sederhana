@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Kalkulator Sederhana Bpur08</title>
+
+</head>
+<style >
+  *{
+    margin: 3;
+    padding: 3;
+  }
+  .button{
+    width: 32;
+    height: 23;
+    font-size: 23;
+    margin: 22;
+  }
+  .main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) translate(-50%);
+  }
+</style>
+<body>
+     <form>
+          <table>
+             <tr>
+                 <td>Inputan 1</td>
+                  <td>:</td>
+                  <td><input type="text" id="a" name="a"></td>
+             </tr>  
+              <tr>
+                 <td>Inputan 2</td>
+                  <td>:</td>
+                  <td><input type="text" id="b" name="b"></td>
+             </tr> 
+              <tr>
+                 <td>Hasil</td>
+                  <td>:</td>
+                  <td><div id="c" name="c"></div></td>
+             </tr>
+             <tr>
+                  <td></td><td></td>
+                  <td><input type="button" value="+" id="tambah">
+                          <input type="button" value="-" id="kurang">
+                         <input type="button" value="x" id="kali">
+                         <input type="button" value="/" id="bagi">
+             </tr>
+          </table>
+    </form>
+    <script text="text/javascript">
+  let a = document.getElementById("a")
+  let b = document.getElementById("b")
+  let c = document.getElementById("c")
+  let d = 0
+  let f = 0
+  let g = 0
+  let tambah = document.getElementById('tambah')
+    let kurang = document.getElementById('kurang')
+      let kali = document.getElementById('kali')
+        let bagi = document.getElementById('bagi')
+
+      a.addEventListener('input', function(e){
+          let {value}=e.target
+          d = parseInt(value)
+          console.log(d)
+      })
+            b.addEventListener('input', function(e){
+          let {value}=e.target
+          f = parseInt(value)
+          console.log(f)
+      })
+            tambah.addEventListener('click', function (){
+              g = d + f
+              c.innerHTML = g
+              console.log(g)
+            })
+              kurang.addEventListener('click', function (){
+              g = d - f
+              c.innerHTML = g
+              console.log(g)
+            })
+                kali.addEventListener('click', function (){
+              g = d * f
+              c.innerHTML = g
+              console.log(g)
+            })
+                  bagi.addEventListener('click', function (){
+              g = d / f
+              c.innerHTML = g
+              console.log(g)
+            })
+</script> 
+</body>
+</html>
